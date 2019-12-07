@@ -26,7 +26,7 @@ $color-google-grey:  #9aa0a6;
 
 $color-analytics-orange: #f37c22;
 $color-android-auto-blue: #03a9f4;
-$color-android-green: #a4c639;
+$color-android-green: #3DDC84;
 $color-android-things-grey: #6c6c6c;
 $color-ar-core-purple: #4a148c;
 $color-blockly-blue: #4285f4;
@@ -199,3 +199,9 @@ $color-weave-green, 'weave.svg');
 
 @include codelab-card(['web'],
   $color-google-blue, 'web.svg');
+
+@include codelab-card(['python'],
+  $color-google-grey, 'python.svg'); 
+  
+@include codelab-card(['programming'],
+  $color-google-grey, 'programming.svg'); 

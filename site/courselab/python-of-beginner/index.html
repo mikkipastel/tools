@@ -1,0 +1,399 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Python of beginner</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="python-of-beginner"
+                  title="Python of beginner"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="แนะนำภาษา python" duration="0">
+        <p>python เวอร์ชั่นปัจจุบัน คือ 3.6 (19 มิถุนายน 2560) เป็น high-level language มีการแปลภาษาแบบ interpreter คือทำทีละบรรทัด เป็นภาษาที่เรียนรู้ได้ง่าย</p>
+<p>ในชีวิตประจำวัน python ถูกนำมาใช้งานหลายอย่าง เช่นการทำ back-end ของ dynamic website, ใช้ในงาน data science, การเขียนโปรแกรมลงบน hardware สำหรับงาน embedded system เป็นต้น<br><br>สามารถดาวน์โหลด python มาใช้งานได้ที่ <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a> และมี document วิธีการเขียนโปรแกรมด้วยภาษา python ที่ <a href="https://docs.python.org/3/library/" target="_blank">https://docs.python.org/3/library/</a></p>
+<p>เราสามารถใช้ editor ในการเขียนโปรแกรมภาษา python ได้หลากหลายโปรแกรม เช่น notepad++, sublinetext, pyCharm เมื่อเราติดตั้งตัว python แล้ว ก็สามารถ run source code ภาษา python ได้</p>
+<p>ความแตกต่างของ python 2.7 vs python 3.3 ถึงเวอร์ชั่นปัจจุบันจะเป็น python 3.x แต่มีบางโปรแกรมและบางหน่วยงานใช้ python 2.7 อยู่ ดังนั้นเราจะมาดูความแตกต่างกันระหว่าง 2 เวอร์ชั่นนี้</p>
+<p class="image-container"><img src="img/f2beef9e0290ba65.png"></p>
+<p>การเลือกใช้ python ขึ้นอยู่กับโปรแกรมที่รองรับ และปัจจัยอื่นๆ ที่นอกเหนือจากความใหม่ของเวอร์ชั่น</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="ติดตั้งโปรแกรม python ลงบน computer" duration="0">
+        <p><a href="https://www.python.org/downloads/" target="_blank">download จากหน้าเว็บ</a> เลือก version ได้ตามชอบใจ จากนั้นลงโปรแกรมปกติเลย และส่วนสำคัญ คือ การ set path ที่ system environment</p>
+<p>กดคลิกขวาที่ไอคอนคอมพิวเตอร์ของท่าน เลือก properties และเลือก Advances system setting</p>
+<p>จากนั้นกดปุ่ม Environment Variables ไปที่ system variable เลือกตัวแปรชื่อ path และใส่ path ของ python ลงไปเพิ่ม แค่นี้ก็เรียบร้อย หรือจะทำที่ command line ก็ได้นะ แต่วิธีนี้ชัวร์และอุ่นใจกว่า</p>
+<p>ตัวโปรแกรม python มีสองแบบ คือแบบ command line กับแบบ GUI</p>
+<p class="image-container"><img alt="command line" src="img/c9ef1619e0bc5932.png"><img alt="GUI" src="img/2b19e6ee85c6fee4.png"></p>
+<p>ข้อดีข้อเสียอย่างย่อๆ คือ แบบ command line เวลาเราพิมพ์ผิด เราจะต้องพิมพ์ใหม่ ส่วนแบบ GUI เราพิมพ์ผิดแล้วก็อปแก้พิมพ์ใหม่ได้ มีแค่นี้แหละ</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="การพิมพ์คำสั่งขั้นต้น" duration="0">
+        <p>การพิมพ์ Hello world ออกมาสู่หน้าจอ เวลาเราเรียนภาษาใหม่ๆ มักจะเป็นคำนี้เสมอเลยเนอะ คำสั่งใช้ง่ายมากๆเลย</p>
+<pre><code>print &#34;Hello world&#34; #ง่ายๆเลย แต่อันนี้ของ python 2.7
+</code></pre>
+<pre><code>print (&#34;Hello world&#34;) #อันนี้ของ python 3.0 ขึ้นไป  
+</code></pre>
+<p>นี่คือสิ่งที่เราบอกว่า syntax ต่างกันไงหล่ะ</p>
+<p>ใช้ <code>#</code> เพื่อ comment code นะจ๊ะ</p>
+<p>ข้อควรระวัง ในภาษา python ไม่ได้ใช้ <code>;</code> ในการสิ้นสุดคำสั่งนะ</p>
+<p>และใช้ 2 spaces แทน tab</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Data type และการประกาศตัวแปร" duration="0">
+        <p>Data type ใน python ไม่ได้มียุ่บยับหรือภาษาอื่น หลักๆมีสามตัวคือ</p>
+<h3 is-upgraded><strong>Number</strong> :</h3>
+<p>ตัวเลขทั้งหลาย เราจะบวกลบคูณหารผ่าน python ก็ทำได้ง่าย สบายๆเลย เช่น</p>
+<p>บวก ลบ คูณ หาร : +, -, *, /         =&gt;       7⁄2<br><br>การหารเอาเศษ  : mod %              =&gt;       7⁄2<br><br>เลขยกกำลัง     : power **           =&gt;       7**2<br><br>การหารแบบปัดลง : floor division //  =&gt;       7//2<br><br>การหารแบบปัดขึ้น : round()            =&gt;       round(7⁄2)</p>
+<p><strong>ตัวอย่าง<br></strong><br>2^n - 1 จะได้เป็น <code>(2**n)-1</code><br>pi r^2  จะได้เป็น <code>pi*(r**2)</code></p>
+<p>ตัวแปรประเภท Number ประกาศ data type เป็น เลขจำนวนเต็ม <code>int()</code> และ จำนวนทศนิยม <code>float()</code><br>หรือประกาศเป็นเลขฐานต่างๆก็ได้ด้วยนะ เช่น เลขฐานสอง <code>bin()</code> เลขฐานสิบหก <code>hex()</code> เช่น</p>
+<pre><code>int(‘11001100&#39;,2) #204 แปลงเลขฐานสองเป็นฐานสิบ  
+int(‘0x20&#39;,16) #32แปลงเลขฐานสิบหกเป็นฐานสิบ
+
+bin(int(‘0xDEC&#39;,16)) #แปลงเลขฐานสิบหกเป็นฐานสิบ และแปลงเป็นเลขฐานสอง
+
+hex(int(‘101010101010&#39;,2)) #0xAAA แปลงเลขฐานสองเป็นฐานสิบ และแปลงเป็นเลขฐานสิบหก
+</code></pre>
+<p><strong>การทำ Fixed point number</strong></p>
+<pre><code>from decimal import Decimal  
+interest = Decimal(&#34;6.4200&#34;)  
+</code></pre>
+<h3 is-upgraded><strong>String</strong> :</h3>
+<p>ตัวอักษร พี่เหลือมสามารถเล่นได้เยอะแยะเลย ทั้งการเลือกตัวอักษร ตัดทิ้ง บวกสตริง เซ็คความยาว</p>
+<p>การสร้างตัวแปร string ใหม่ : <code>hello = str()</code></p>
+<p>การตรวจสอบความยาวของ string : <code>len(hello)</code><br>ถ้าความยาวเป็น 0 นั่นคือเป็นตัวแปร string เปล่าๆ นั่นเอง</p>
+<p>ค้นหาคำที่เราต้องการในตัวแปร string : <code>find()</code></p>
+<p><strong>การตัดคำ</strong><br>การนำ space หัวท้ายออกจากกัน : <code>strip()</code><br>การตัดคำออกตามที่เราต้องการ : <code>split()</code><br>การแทนค่าคำ : <code>replace()</code></p>
+<p><strong>ช่วงลองทำดู</strong> เนื่องจากมันเล่นได้หนุกหนาน เลยมีอะไรให้ลองทำนิดหน่อย</p>
+<ol type="1">
+<li>ให้ตัวแปร string ชื่อว่า hello แล้วกัน มีค่า Hello, it&#39;s me. I was wondering if after all these years<br></li>
+<li>ตรวจสอบความยาวของ hello<br></li>
+<li>หาคำว่า me ใน hello<br></li>
+<li>ตัดคำจาก space ออกเป็นคำๆ<br></li>
+<li>แทนค่าคำว่า me ว่า you<br></li>
+</ol>
+<p><strong>คำเฉลย</strong></p>
+<pre><code>hello = &#34;Hello, it&#39;s me. I was wondering if after all these years&#34;  
+len(hello)  
+hello.find(&#34;me&#34;)  
+hello.split(&#34; &#34;)  
+hello.replace(&#34;me&#34;,&#34;you&#34;)  
+</code></pre>
+<p>เราสามารถใช้ escaped with backslashes <code>(\\n \\r \\n \\t \\0 \\x)</code> ใน python ได้ด้วยนะ</p>
+<h3 is-upgraded><strong>List</strong> :</h3>
+<p>อันนี้อาจจะต่างจากพวกภาษา C แต่ภาษาอื่นๆก็มี มันคล้ายๆ array แต่ไม่ใช่ซะทีเดียว</p>
+<pre><code>list = [1, 2, ,3, ...]  
+</code></pre>
+<p>การใส่ค่าใน list ไม่จำเป็นต้องใส่ค่าประเภทเดียวกัน เช่น</p>
+<pre><code>member = [&#34;brown&#34;, 94, True]  
+</code></pre>
+<p>การเพิ่มสมาชิกใหม่ มี 2 แบบ คือ</p>
+<ul>
+<li><strong>append</strong> : ใส่เป็นคำ หรือตัวเลขก็ได้ =&gt; <code>list.append()</code></li>
+<li><strong>extend</strong>  : ใส่เป็น string character =&gt; <code>list.extend(\[\])</code></li>
+</ul>
+<p>การลบสมาชิกออก ใช้ <code>list.remove()</code> ข้างในใส่สมาชิกตัวที่เราต้องการจะลบ<br><br>ถ้าล้างไส้ในทั้งหมด ใช้ <code>list.clear()</code></p>
+<p>การตรวจสอบความยาวของ list ใช้คำสั่ง <code>len(list)</code></p>
+<p><strong>ตัวอย่างการใช้งาน</strong></p>
+<pre><code>fav_stock = [&#34;ADVANC&#34;, &#34;BEM&#34;, &#34;CPALL&#34;, &#34;CPF&#34;, &#34;AU&#34;]  
+</code></pre>
+<ol type="1">
+<li>เพิ่ม &#34;BAY&#34;<br></li>
+<li>ลบ &#34;AU&#34;<br></li>
+<li>เปลี่ยน &#34;ADVANC&#34; เป็น &#34;INTOUCH&#34;<br></li>
+<li>หาจำนวนชื่อหุ้นใน fav_stock<br></li>
+</ol>
+<p><strong>คำเฉลย</strong></p>
+<pre><code>fav_stock.append(&#34;BAY&#34;)
+fav_stock.remove(&#34;AU&#34;)
+fav_stock[0] = &#34;INTOUCH&#34;
+len(fav_stock)
+</code></pre>
+<h3 is-upgraded><strong>Boolean</strong> :</h3>
+<p>อันนี้เหมือนภาษาอื่นๆ มีค่าสองแบบเท่านั้น คือ <code>True</code> กับ <code>False</code></p>
+<p>สรุป python ไม่ต้องประกาศตัวแปรให้วุ่นวาย เช่น uint8 i = 0; งี้ แค่ใส่ค่าไปเลย เช่น <code>i = 0</code> จบ</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="comparison" duration="0">
+        <p>การเปรียบเทียบค่าในภาษา python แบ่งเป็น 4 แบบ ดังนี้</p>
+<ul>
+<li><strong>logical</strong> : and, or, not, and not เช่น <code>(len(list) &gt;= 0) and (boo != False)</code></li>
+<li><strong>identity</strong> : is, is not, not เช่น <code>not (boo)</code></li>
+<li><strong>arithmetic</strong> : &gt;, &gt;=, &lt;, &lt;=, ==, != เช่น <code>len(list) &gt;= 0</code>, <code>boo != False</code></li>
+<li><strong>Null</strong> : None เช่น <code>list != None</code><br></li>
+</ul>
+<p>ซึ่งเรื่องนี้นำไปใช้ใน condition statement</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="condition statement" duration="0">
+        <p>ใน python มี <code>if-else</code> ในการเลือกการตัดสินใจ มี syntax ดังนี้</p>
+<ul>
+<li><strong>แบบทางเดียว</strong></li>
+</ul>
+<pre><code>if (consition):  
+    &lt;statement&gt;  
+</code></pre>
+<ul>
+<li><strong>แบบสองทาง</strong><pre><code>if (consition):  
+    &lt;statement&gt;  
+else:  
+    &lt;statement&gt;  
+</code></pre>
+</li>
+<li><strong>แบบหลายทาง</strong><pre><code>if (condition):  
+    &lt;statement&gt;  
+elif (condition):  
+   &lt;statement&gt;  
+else:  
+    &lt;statement&gt;  
+</code></pre>
+</li>
+</ul>
+<p>มาลองทำดูดีกว่า</p>
+<p>เขียนโปรแกรมตัดเกรดกันเถอะ ...<br><br>การตัดเกรดของวิชาการเรียน python พื้นฐาน มีเกณฑ์ ดังนี้<br><br>100 = A+, &gt;=80 = A, &gt;=70 = B, &gt;=60 = C, &gt;=50 = D, other = F</p>
+<p>มาลงโค้ดดิ้งกัน<br><br>ให้ input มีชื่อตัวแปรว่า score และ output ชื่อว่า grade</p>
+<pre><code># input student score  
+score = 78  
+  
+if (score == 100):  
+  grade = &#34;A+&#34;  
+elif ((score &gt;= 80) and (score &lt; 100)):  
+  grade = &#34;A&#34;  
+elif ((score &gt;= 70) and (score &lt; 80)):  
+  grade = &#34;B&#34;  
+elif ((score &gt;= 60) and (score &lt; 70)):  
+  grade = &#34;C&#34;  
+elif ((score &gt;= 50) and (score &lt; 60)):  
+  grade = &#34;D&#34;  
+else:  
+  grade = &#34;F&#34;  
+  
+print (grade)
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="loop statement" duration="0">
+        <p>ใน python มี for และ while ในการใช้วนลูป</p>
+<p>มาลองทำดูดีกว่า พิมพ์ค่าสมาชิกแต่ละตัวใน array_list<br><br>ซึ่งในภาษา python จะต่างจากภาษาอื่นๆ สามารถวนลูปค่าใน list ได้เลย ภาษาอื่นๆจะวนจากตัวเลข เช่น</p>
+<pre><code>array_list = [‘apple&#39;, ‘papaya&#39;, &#39;banana&#39;, &#39;orange&#39;]  
+for i in array_list:  
+   print (i)  
+</code></pre>
+<p>ให้พิมพ์เลข 1-10 ออกมาสู่หน้าจอ สามารถเขียนได้ดังนี้</p>
+<pre><code># print 1-10
+i=1  
+while i &lt;= 10:  
+    print(i)  
+    i += 1  
+</code></pre>
+<p>function range เป็น function ที่สร้าง range ค่าในช่วงที่เราต้องการ<br><br>เช่น <code>range(10)</code> สร้างค่าเริ่มจาก 0 ไป 10 ตัว ดังนั้นจะได้ค่า 0-9 เราไม่สามารถเขียนเป็นเลขโดดๆใน for ได้</p>
+<pre><code># print 1-10
+for i in range(1, 11):  
+   print (i)  
+</code></pre>
+<p><strong>loop comprehensions</strong> คือการเขียน loop statement แบบลดรูป พร้อมการเปรียบเทียบค่า<br><br>ตัวอย่าง เช่น หาเลขระหว่าง 0-30 ที่หารด้วย 2 ลงตัว</p>
+<p>ถ้าเราจะเขียนแบบเต็มๆ จะได้แบบนี้ ข้อดี คือ สามารถตรวจสอบได้เวลาที่โค้ดเรามีปัญหา</p>
+<pre><code>evens = []  
+for i in range(31):  
+   if i % 2 == 0:  
+      evens.append(i)  
+</code></pre>
+<p>และการเขียนแบบลดรูปแบบ <strong>loop comprehensions</strong></p>
+<pre><code>evens = [i for i in range(31) if i % 2 == 0]
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="การใช้ break, continue และ pass ใน statement" duration="0">
+        <ul>
+<li><strong>break</strong> คือ การให้โค้ดของเราหยุดทำงาน เมื่อเข้าสู่ statement ที่เรากำหนด<br></li>
+<li><strong>continue</strong> คือหลังจากเจอ statement ที่เรากำหนด ก็ให้ตรวจที่ statement ถัดไป<br></li>
+<li><strong>pass</strong> ใส่เมื่อเราไม่ให้มีการทำงานใดๆเมื่อเข้า statement ที่เรากำหนด<br></li>
+</ul>
+<p><strong>ตัวอย่าง</strong></p>
+<pre><code># check order  
+if (order == 0):  
+  break  
+elsif (order == 1):  
+  continue  
+elif (order % 3 == 0):  
+  pass  
+else:  
+  print (order)
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Function" duration="0">
+        <p>มี syntax การเขียนดังนี้</p>
+<pre><code>def fn_name(input):  
+   ...  
+   return output  
+</code></pre>
+<p>เรามีวิธีง่ายๆ นั่นคือ การนำโปรแกรมตัดเกรดของเรามาใส่ในฟังก์ชั่น โดยมี input คือ คะแนนของนักเรียนในวิชาการเรียน python พื้นฐาน และ คืนค่าเป็นเกรดของนักเรียน</p>
+<pre><code>def python_grade(score)  
+  # ใส่โปรแกรมตัดเกรดของเราลงไป  
+  if (score == 100):  
+    grade = &#34;A+&#34;  
+  elif ((score &gt;= 80) and (score &lt; 100)):  
+    grade = &#34;A&#34;  
+  elif ((score &gt;= 70) and (score &lt; 80)):  
+    grade = &#34;B&#34;  
+  elif ((score &gt;= 60) and (score &lt; 70)):  
+    grade = &#34;C&#34;  
+  elif ((score &gt;= 50) and (score &lt; 60)):  
+    grade = &#34;D&#34;  
+  else:  
+    grade = &#34;F&#34;  
+  return grade  
+``` 
+
+การเรียกใช้งาน เป็นดังนี้  
+
+```python 
+python_grade(78)  
+</code></pre>
+<p>ถ้าต้องการแสดงผล สามารถใส่ print ครอบไว้ได้</p>
+<pre><code>print(python_grade(78))
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Data structure" duration="0">
+        <h3 is-upgraded><strong>tuple</strong></h3>
+<p>เราสามารถเก็บข้อมูล data type ใดก็ได้ ในตัวแปร tuple</p>
+<pre><code>t = 12345, 54321, &#39;hello!&#39;
+</code></pre>
+<p>การ update ค่าใน tuple : <code>t[0] = 0</code><br>เราสามารถนำ tuple นำมาบวกกันได้ด้วยนะ : <code>t3 = t1 + t2</code><br>การลบค่าทั้งหมดใน tuple : <code>del t</code></p>
+<h3 is-upgraded><strong>set</strong></h3>
+<p><strong>union</strong> หาสมาชิกทั้งหมดที่อยู่ใน a และ b -&gt;set(a) | set(b)<br><strong>intersection</strong> หาสมาชิกที่เหมือนกันใน a และ b -&gt; set(a) &amp; set(b)<br><strong>complement</strong> หาสมาชิกที่อยู่ใน a แต่ไม่อยู่ใน b -&gt; set(a) - set(b)<br><strong>subset</strong> หาสมาชิกจาก a ที่อยู่ใน b -&gt; set(a).issubset(set(b))</p>
+<h3 is-upgraded><strong>dictionary</strong></h3>
+<pre><code>num = {‘one&#39;: 1, ‘two&#39;: 2, ‘three&#39;: 3}  
+</code></pre>
+<p>หาขนาดของ dict : <code>len(num)</code><br>หา key ของ dict : <code>num.keys()</code><br>หา value ของ key : <code>num.values()</code><br>การเพิ่มสมาชิกหรือ update value ของ dict : <code>num[‘four&#39;]</code> = 4<br>การเคลียร์ค่าใน dict : <code>num.clear()</code></p>
+<p>การแสดงผลค่า key และ value ของสมาชิกแต่ละตัวใน dict</p>
+<pre><code>for key, val in num.items():  
+ print (key, val)  
+</code></pre>
+<p>การเรียงค่า key ของ dict โดย output จะเป็น list : <code>sorted(num)</code><br>การเรียงค่า key และ value ของ dict โดย output จะเป็น list เช่นกัน: <code>sorted(num.value)</code></p>
+<p>for sort by key and show all member in dict, output is tuples data type</p>
+<pre><code>sorted(num.items(), key=lambda x:x[1])
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="การทำงานร่วมกันกับไฟล์" duration="0">
+        <p>การอ่านไฟล์ มี syntax หลักๆ ดังนี้</p>
+<pre><code>f = open(filename, mode)  
+</code></pre>
+<p>parameter ตัวแรก คือ ชื่อไฟล์ และตัวที่สอง คือโหมดการอ่านเขียนไฟล์</p>
+<p>โหมดการเขียนอ่านไฟล์ มีดังนี้<br><code>r</code> : read อ่าน<br><code>w</code> : overwrite เขียนทับ<br><code>a</code> : write at end of the file เขียนต่อ<br><strong>mode++</strong> : reading &amp; writing =&gt; r+, w+ a+</p>
+<p>มาดูการเขียนโค้ดกันดีกว่า</p>
+<pre><code># open file  
+f = open(‘text.txt&#39;, ‘a&#39;)  
+  
+# read file   
+code = f.read()  
+</code></pre>
+<p>หลังจากอ่านไฟล์แล้ว สามารถส่วนนี้ไปใช้งานได้ แต่ประเภทของตัวแปรจะเป็นแบบ binary</p>
+<p>ดังนั้นอาจจะต้องแปลงเป็น string โดยใช้ <code>decode(&#34;utf-8&#34;)</code> เช่น</p>
+<pre><code># find word in line of file  
+if (code.find(b&#34;file&#34;) &gt;= 0):  
+  print (code)  
+  
+elif (code.decode(&#34;utf-8&#34;).find(b&#34;line&#34;) &gt;= 0):  
+  print (code)  
+  
+# spilt line  
+lines = code.strip().splitlines()  
+  
+# read single line of a file  
+f.readline()  
+  
+# write file  
+f.write(&#34;blah blah blah&#34;)  
+  
+#close file  
+f.close()
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Exception handling" duration="0">
+        <p><strong>syntax error</strong> คือ การที่ compiler แจ้งในส่วนที่เราเขียนโค้ดผิด syntax ที่เราพบเห็นกัน มีดังนี้</p>
+<ul>
+<li><code>SyntaxError : invalid syntax</code></li>
+<li><code>IndexError: string index out of range</code><br></li>
+<li><code>NameError: name &#39;n&#39; is not defined</code><br></li>
+</ul>
+<p><strong>exception</strong> คือ การที่ compiler แจ้งเราว่า code error ไม่สามารถทำงานต่อได้ มี Error defect ดังนี้</p>
+<ul>
+<li><code>ZeroDivisionError: division by zero</code><br></li>
+<li><code>NameError: name &#39;test2&#39; is not defined</code><br></li>
+<li><code>TypeError: unsupported operand type(s) for -: &#39;str&#39; and &#39;int&#39;</code></li>
+</ul>
+<p><strong>handling exception</strong> การจัดการเมื่อโค้ดของเรามีปัญหา มี syntax การเขียน ดังนี้</p>
+<pre><code>try:  
+   # Protected code  
+except:  
+   # Catch block  
+else:  
+   # The finally block always executes.  
+</code></pre>
+<p>การทำงาน ทำในส่วนของ try ก่อน ถ้าทำงานในส่วนนี้สำเร็จ ก็คือจบ ถ้าไม่สำเร็จ จะไปในส่วนของ except ต่อ:</p>
+<p><strong>raising Exceptions</strong> ถ้าเปรียบเทียบกับ JAVA เหมือน throw</p>
+<pre><code>ValueError(&#39;A very specific bad thing happened&#39;)  
+</code></pre>
+<p>ตัวอย่างการใช้งาน เช่น การหารด้วยศูนย์</p>
+<pre><code>try:  
+   result = input1 / input2  
+except ZeroDivisionError:  
+   print (&#34;cannot divide by 0&#34;)
+</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
